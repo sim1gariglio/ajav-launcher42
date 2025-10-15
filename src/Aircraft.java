@@ -1,3 +1,4 @@
+
 public abstract class Aircraft implements Flyable {
     protected long id;
     protected String name;
