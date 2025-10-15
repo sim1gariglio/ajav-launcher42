@@ -20,19 +20,19 @@ public class JetPlane extends Aircraft {
             case "SUN":
                 lat += 10;
                 hgt += 2;
-                System.out.println(ConsoleColors.YELLOW + "JetPlane#" + name + "(" + id + "): Sunny and smooth!" + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.YELLOW + "JetPlane#" + name + "(" + id + "): Here comes the sun, going 2 units up! and 10 units west." + ConsoleColors.RESET);
                 break;
             case "RAIN":
                 lat += 5;
-                System.out.println(ConsoleColors.BLUE + "JetPlane#" + name + "(" + id + "): Rain ahead, adjusting course." + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.BLUE + "JetPlane#" + name + "(" + id + "): It's raining, going 5 units west." + ConsoleColors.RESET);
                 break;
             case "FOG":
                 lat += 1;
-                System.out.println(ConsoleColors.CYAN + "JetPlane#" + name + "(" + id + "): Fog detected, reducing speed." + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.CYAN + "JetPlane#" + name + "(" + id + "):  Fog ahead, going 1 unit west." + ConsoleColors.RESET);
                 break;
             case "SNOW":
                 hgt -= 7;
-                System.out.println(ConsoleColors.WHITE + "JetPlane#" + name + "(" + id + "): Snowstorm! Descending." + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.WHITE + "JetPlane#" + name + "(" + id + "): Snow is dangerous, going down 7 units." + ConsoleColors.RESET);
                 break;
         }
         if (hgt > 100) hgt = 100;

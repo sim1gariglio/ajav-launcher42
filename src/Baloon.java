@@ -20,19 +20,19 @@ public class Baloon extends Aircraft {
             case "SUN":
                 lon += 2;
                 hgt += 4;
-                System.out.println(ConsoleColors.YELLOW + "Baloon#" + name + "(" + id + "): Enjoying the sun!" + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.YELLOW + "Baloon#" + name + "(" + id + "): Here comes the sun, going 4 units up! and 2 units east." + ConsoleColors.RESET);
                 break;
             case "RAIN":
                 hgt -= 5;
-                System.out.println(ConsoleColors.BLUE + "Baloon#" + name + "(" + id + "): Rain is making me descend." + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.BLUE + "Baloon#" + name + "(" + id + "): It's raining, descending 5 units." + ConsoleColors.RESET);
                 break;
             case "FOG":
                 hgt -= 3;
-                System.out.println(ConsoleColors.CYAN + "Baloon#" + name + "(" + id + "): Fog ahead, losing altitude." + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.CYAN + "Baloon#" + name + "(" + id + "): Fog ahead, losing 3 units of altitude." + ConsoleColors.RESET);
                 break;
             case "SNOW":
                 hgt -= 15;
-                System.out.println(ConsoleColors.WHITE + "Baloon#" + name + "(" + id + "): Snow is dangerous!" + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.WHITE + "Baloon#" + name + "(" + id + "): Snow is dangerous, going down 15 units." + ConsoleColors.RESET);
                 break;
         }
         if (hgt > 100) hgt = 100;

@@ -20,19 +20,19 @@ public class Helicopter extends Aircraft {
             case "SUN":
                 lon += 10;
                 hgt += 2;
-                System.out.println(ConsoleColors.YELLOW + "Helicopter#" + name + "(" + id + "): Clear skies, flying fast!" + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.YELLOW + "Helicopter#" + name + "(" + id + "): Here comes the sun, going 2 units up! and 10 units east." + ConsoleColors.RESET);
                 break;
             case "RAIN":
                 lon += 5;
-                System.out.println(ConsoleColors.BLUE + "Helicopter#" + name + "(" + id + "): Rain slows us down." + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.BLUE + "Helicopter#" + name + "(" + id + "): It's raining, going 5 units east." + ConsoleColors.RESET);
                 break;
             case "FOG":
                 lon += 1;
-                System.out.println(ConsoleColors.CYAN + "Helicopter#" + name + "(" + id + "): Foggy, proceeding with caution." + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.CYAN + "Helicopter#" + name + "(" + id + "):  Fog ahead, going 1 unit east." + ConsoleColors.RESET);
                 break;
             case "SNOW":
                 hgt -= 12;
-                System.out.println(ConsoleColors.WHITE + "Helicopter#" + name + "(" + id + "): Snow! Losing altitude." + ConsoleColors.RESET);
+                System.out.println(ConsoleColors.WHITE + "Helicopter#" + name + "(" + id + "): Snow is dangerous, going down 12 units." + ConsoleColors.RESET);
                 break;
         }
         if (hgt > 100) hgt = 100;
