@@ -2,10 +2,6 @@
 ./WeatherProvider.java
 ./JetPlane.java
 ./Coordinates.java
-./Exceptions/ScenarioFormatException.java
-./Exceptions/CoordinateException.java
-./Exceptions/AircraftTypeException.java
-./Exceptions/SimulationCycleException.java
 ./utils/ConsoleColors.java
 ./Baloon.java
 ./Helicopter.java
@@ -14,3 +10,7 @@
 ./Tower.java
 ./WeatherTower.java
 ./AircraftFactory.java
+./exceptions/ScenarioFormatException.java
+./exceptions/CoordinateException.java
+./exceptions/AircraftTypeException.java
+./exceptions/SimulationCycleException.java

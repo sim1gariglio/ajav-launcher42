@@ -15,6 +15,7 @@ public class Simulator {
         AircraftFactory factory = AircraftFactory.getFactory();
         int numCycles = 0;
         List<Flyable> aircrafts = new ArrayList<>();
+        Map<String, Integer> typeCounters = new HashMap<>(); // For sequential numbering
 
         try (BufferedReader br = new BufferedReader(new FileReader(args[0]))) {
             String line = br.readLine();
@@ -55,6 +56,18 @@ public class Simulator {
                         ": type=" + type + ", name=" + name
                     );
                 }
+
+                // Sequential number check
+                int expectedNumber = typeCounters.getOrDefault(type, 1);
+                String expectedName = type.charAt(0) + String.valueOf(expectedNumber);
+                if (!name.equals(expectedName)) {
+                    throw new ScenarioFormatException(
+                        "Aircraft name must be sequential for type " + type + " at line " + lineNumber +
+                        ": expected " + expectedName + ", found " + name
+                    );
+                }
+                typeCounters.put(type, expectedNumber + 1);
+
                 Coordinates coord = new Coordinates(lon, lat, hgt);
                 Flyable f = factory.newAircraft(type, name, coord);
                 if (f != null) {
